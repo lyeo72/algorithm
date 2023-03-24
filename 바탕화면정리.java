@@ -1,37 +1,9 @@
 import java.util.*;
-import java.io.*;
 
-
-public class 바탕화면정리 {
-    public static void main(String[] args) throws IOException{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        // paper 입력 받기
-        System.out.print("Enter keymap (comma-separated): ");
-        String paper = br.readLine();
-        StringTokenizer st1 = new StringTokenizer(paper, " ");
-        String[] wallpaper = new String[st1.countTokens()];
-        for (int i = 0; i < wallpaper.length; i++) {
-            wallpaper[i] = st1.nextToken();
-        }
-
-    
-
-        // solution 함수 호출
-        int[] result = solution(wallpaper);
+class Solution {
+    public int[] solution(String[] wallpaper) {
         
-
-        for(int i = 0; i < result.length; i++) {
-            System.out.print("Result: " + result[i] + ", ");
-        }
-
-        
-    }
-
-    public static int[] solution(String[] wallpaper) {
-       
-
-       int lux = 0;
+      int lux = 0;
        int luy = 0;
        int rdx = 0;
        int rdy = 0;
