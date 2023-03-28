@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 
-public class as {
+public class 공원산책 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -49,11 +49,11 @@ public class as {
         }
         
         // 도착지
-        
+        int dH = h;
+        int dW = w;
         
         for(String route : routes) {
-            int dH = 0;
-            int dW = 0;
+            
         
             String direction = route.split(" ")[0]; // E W S N
             int move = Integer.parseInt(route.split(" ")[1]);
