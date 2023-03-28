@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.stream.Stream;
 import java.io.*;
 
 
@@ -33,7 +32,7 @@ public class 신고결과 {
         int[] result = solution(idList, report, k);
 
         // 결과 출력
-        System.out.print("Result: ");
+        System.out.print("Result: " + result);
         
     }
 
