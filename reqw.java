@@ -37,14 +37,16 @@ public class reqw {
         List<String> skipList = new ArrayList<>(Arrays.asList(skip.split("")));
 
         for(int i = 0; i < s.length(); i++) {
-            int newIndex = (apList.indexOf(String.valueOf(s.charAt(i))) + index) % 25;
+            int a = apList.indexOf(String.valueOf(s.charAt(i)));
+            int newIndex = (a + index) % 25;
+            int plus = 0;
             
-            for(int j = index + 1; j <= newIndex; i++){
+            for(int j = a + 1; j <= newIndex; j++){
                 if(skipList.contains(apList.get(j))){
-                    newIndex++;
+                    plus++;
                 }
             }
-            anwer += apList.get(newIndex);
+            anwer += apList.get(newIndex + plus);
         }
 
        
