@@ -3,7 +3,7 @@ import java.util.stream.Collectors;
 import java.io.*;
 
 
-public class dfa {
+public class 덧칠하기 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -35,25 +35,18 @@ public class dfa {
     }
 
     public static int solution(int n, int m, int[] section) {
-
         List<Integer> sectionList = Arrays.stream(section).boxed().collect(Collectors.toList());
 
-        int count = 1;
+        int answer = 0;
 
-        Iterator<Integer> iterator = sectionList.iterator();
+        int max = 0;
 
-        int range = sectionList.get(0) + m - 1;
-
-        while(iterator.hasNext()) {
-            
-            int num = iterator.next();
-
-            if(num > range) {
-                count++;
+        for(int sec : sectionList) {
+            if(sec > max) {
+                answer++;
+                max = sec + m - 1;
             }
-            iterator.remove();
-
         }
-       return count;
+       return answer;
     }
 }
